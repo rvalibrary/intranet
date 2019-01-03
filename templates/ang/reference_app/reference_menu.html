@@ -1,0 +1,33 @@
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- brand link -->
+        <navbar-brand></navbar-brand>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <link-dropdown></link-dropdown>
+        </div>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" ng-init = "load_pagination()">
+          <ul class="navbar-nav mr-auto">
+          </ul>
+
+          <dir-pagination-controls ng-if = "showpagination == true && showdata" style="height: 38px;margin-top: 1px; margin-right: 10px;"></dir-pagination-controls>
+
+          <button ng-click="navinfopage()" style = "margin-right: 10px; padding-left: 10px; padding-right: 10px;" class="btn btn-secondary"><i class="fa fa-question-circle" aria-hidden="true"></i></button>
+          <button class="btn btn-secondary" type="button" ng-click='opencontrols()'>Open Controls</button>
+
+          <!-- logout button -->
+          <navbar-logout></navbar-logout>
+
+        </div>
+  </div><!-- container -->
+</nav>
+
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->

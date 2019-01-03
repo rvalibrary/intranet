@@ -1,0 +1,56 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded" id="libcal_nav">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <!-- brand link -->
+    <!-- <navbar-brand></navbar-brand> -->
+    <rpl-logo></rpl-logo>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <!-- dropdown menu -->
+      <link-dropdown></link-dropdown>
+
+      <div class="dropdown" style="margin-top: 2px; margin-left: 10px;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-disabled = "datedisable">
+          {{branch}}
+        </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a ng-repeat = "location in mapping" class="dropdown-item" ng-click = "changebranch(location.branch)" href="#">{{location.branch}}</a>
+          </div> <!-- dropdown-menu -->
+      </div> <!-- dropdown -->
+
+        <!--calendar condensed view checkbox -->
+        <div ng-if="calendar_option_selected" class="" style="height: 36px; margin-top: 3px; padding: 3px 0; margin-left: 15px;">
+          <label class="tgl" style="vertical-align: middle; margin: 0;">
+            <input type="checkbox" ng-model="calendartoggleswitch" ng-click="clicked()">
+            <span class="tgl_body">
+              <span class="tgl_switch"></span>
+              <span class="tgl_track">
+                <span class="tgl_bgd"></span>
+                <span class="tgl_bgd tgl_bgd-negative"></span>
+              </span>
+            </span>
+          </label>
+        </div>
+        <span ng-if="calendar_option_selected" class="navbar-text" style="margin-left: 5px; margin-top: 1px;">Condensed view {{calendartoggleswitch ? 'off' : 'on'}}</span>
+
+        <button ng-click = "toggle_tileview()" ng-if="spaces_option_selected" class="btn btn-secondary" style="height: 38px; margin-top: 2px; margin-left: 10px;">Tile View</button>
+
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+      </ul>
+      <button style = "margin-right: 10px;" class="btn btn-secondary pull-right" ng-if="calendartoggleswitch==false && calendar_option_selected" ng-click = "write_text_file()" ng-disabled = "textfile_array.length == 0"><i class="fa fa-save" aria-hidden="true"></i></button>
+      <button style = "margin-right: 10px;" class="btn btn-secondary pull-right"  ng-print print-element-id="printThisElement" ng-disabled = "datedisable || disable_load"><i class="fa fa-print" aria-hidden="true"></i></button>
+
+      <!-- logout button -->
+      <navbar-logout></navbar-logout>
+
+    </div>
+
+  </div><!-- container -->
+</nav>

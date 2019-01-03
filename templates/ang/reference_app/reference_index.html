@@ -1,0 +1,83 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en-us" ng-app='referenceApp'>
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <title>Reference</title>
+
+    <link rel="shortcut icon" href='{% static "img/favicon.png" %}' type="image/x-icon">
+
+    <!-- BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- STYLESHEET -->
+    <link rel='stylesheet' href='{% static "js/external/node_modules/angular-loading-bar/build/loading-bar.min.css" %}' type='text/css' media='all' />
+    <!-- switched to AngularCSS -->
+    <!-- <link rel="stylesheet" href='{% static "css/style.css" %}'> -->
+    <!-- load angular via CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-resource.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-cookies.js"></script>
+
+    <!-- Main 'reference_app' AngularJS files -->
+    <script src='{% static "js/reference_app/app.module.js" %}'></script>
+    <script src='{% static "js/reference_app/app.config.js" %}'></script>
+    <script src='{% static "js/reference_app/app.directives.js" %}'></script>
+
+    <!-- External modules -->
+
+    <script src='{% static "js/external/node_modules/angular-loading-bar/build/loading-bar.min.js" %}'></script>
+    <script src='{% static "js/external/dirPagination.js" %}'></script>
+    <script src='{% static "js/external/angular-css.min.js" %}'></script>
+    <script src='{% static "js/users_app/core/user/user.module.js" %}'></script>
+    <script src='{% static "js/users_app/core/user/user.service.js" %}'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js'></script>
+    <script src='{% static "js/external/node_modules/angular-chart.js/dist/angular-chart.min.js" %}'></script>
+    <script src='{% static "js/shared/sharednav.module.js" %}'></script>
+    <script src='{% static "js/shared/sharednav.component.js" %}'></script>
+
+    <!-- Internal modules -->
+    <!-- <script src='{% static "js/reference_app/nav/navbar.module.js" %}'></script>
+    <script src='{% static "js/reference_app/nav/navbar.component.js" %}'></script> -->
+
+    <script src='{% static "js/reference_app/stats/stats.module.js" %}'></script>
+    <script src='{% static "js/reference_app/stats/stats.directives.js" %}'></script>
+    <script src='{% static "js/reference_app/stats/stats.component.js" %}'></script>
+    <script src='{% static "js/reference_app/stats/stats.filters.js" %}'></script>
+
+    <script src='{% static "js/reference_app/controls/controls.module.js" %}'></script>
+    <script src='{% static "js/reference_app/controls/controls.component.js" %}'></script>
+
+    <script src='{% static "js/reference_app/core/cache/cache.module.js" %}'></script>
+    <script src='{% static "js/reference_app/core/cache/cache.service.js" %}'></script>
+
+    <script src='{% static "js/reference_app/core/request/request.module.js" %}'></script>
+    <script src='{% static "js/reference_app/core/request/request.service.js" %}'></script>
+
+    <script src='{% static "js/reference_app/core/bigdata/bigdata.module.js" %}'></script>
+    <script src='{% static "js/reference_app/core/bigdata/bigdata.service.js" %}'></script>
+
+
+
+
+
+
+
+    <script>
+        var STATIC_URL = '{{ STATIC_URL|escapejs }}';
+        function staticfiles(path) {return STATIC_URL + path;}
+    </script>
+  </head>
+
+  <body>
+    <div ng-view></div>
+  </body>
+</html>

@@ -1,0 +1,661 @@
+.table_parent {
+  display: table; }
+
+.table_child {
+  display: table-cell;
+  vertical-align: middle; }
+
+.nodisplay {
+  display: none; }
+
+.dashed {
+  border: 1px dashed black; }
+
+.rpl-links {
+  cursor: pointer; }
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 100%; } }
+.modal-dialog {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+.modal-content {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0; }
+
+.modal-body {
+  padding-left: 40px;
+  padding-right: 40px; }
+
+.modal-header {
+  padding-left: 40px; }
+
+.modal_image_container {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top; }
+
+.modal_image {
+  max-height: 60vh; }
+
+.btn-s1, .options-s1 {
+  background-color: #006599;
+  color: white; }
+
+.options-s1:focus, .options-s1:active:focus, .options-s1.active:focus,
+.options-s1.focus, .options-s1:active.focus, .options-s1.active.focus {
+  outline: none;
+  box-shadow: none; }
+
+.btn-s1:hover {
+  background-color: #5d34af; }
+
+.btn-s2 {
+  background-color: #ff9d3f; }
+
+.btn-s2-hover {
+  background-color: #cc6600; }
+
+.btn-s2-active {
+  background-color: #b53d00; }
+
+.btn-s2, .options-s2 {
+  background-color: #cc6600;
+  color: white; }
+
+.options-s2:focus, .options-s2:active:focus, .options-s2.active:focus,
+.options-s2.focus, .options-s2:active.focus, .options-s2.active.focus {
+  outline: none;
+  box-shadow: none; }
+
+.btn-s2:hover {
+  background-color: #b53d00; }
+
+.page_blur {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px); }
+
+.spinner {
+  -webkit-animation: spin 1.3s linear infinite;
+  -moz-animation: spin 1.3s linear infinite;
+  animation: spin 1.3s linear infinite; }
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+.loading_div_parent {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 100; }
+
+.loading_div {
+  z-index: 101;
+  height: 100px;
+  width: 100px;
+  margin: calc(50vh - 50px) auto;
+  font-size: 100px; }
+
+.loadshow {
+  display: inline !important; }
+
+@media (min-width: 768px) {
+  .events_table td, .events_table th {
+    padding: .50rem; }
+
+  .event_data_container_div {
+    padding-top: 20px; }
+
+  #calendar_featured_img {
+    width: 250px; }
+
+  body {
+    background-color: #F5F5F6; }
+
+  .submit_blue {
+    border-color: #72cfff;
+    background-color: #72cfff; }
+
+  .submit_red {
+    border-color: #E5B27F;
+    background-color: #E5B27F; }
+
+  @keyframes glowing_blue {
+    0% {
+      box-shadow: 0 0 6px 0px #72cfff; }
+    40% {
+      box-shadow: 0 0 6px 6px #72cfff; }
+    60% {
+      box-shadow: 0 0 6px 6px #72cfff; }
+    100% {
+      box-shadow: 0 0 6px 0px #72cfff; } }
+  @keyframes glowing_red {
+    0% {
+      box-shadow: 0 0 6px 0px #E5B27F; }
+    40% {
+      box-shadow: 0 0 6px 6px #E5B27F; }
+    60% {
+      box-shadow: 0 0 6px 6px #E5B27F; }
+    100% {
+      box-shadow: 0 0 6px 0px #E5B27F; } }
+  .button_blue {
+    animation: glowing_blue 1500ms infinite; }
+
+  .button_red {
+    animation: glowing_red 1500ms infinite; }
+
+  #get_events_button {
+    border-radius: 65px;
+    width: 65px;
+    height: 65px;
+    font-size: 25px; }
+
+  #bottom_datepicker_nav {
+    padding-bottom: 15px;
+    background-color: #E1E2E1; }
+
+  #libcal_nav {
+    background-color: #E1E2E1; }
+
+  #querybutton_ul button {
+    position: absolute;
+    bottom: 0px;
+    right: 12.5px; }
+
+  #querybutton_ul div {
+    position: absolute;
+    bottom: -12.5px;
+    right: 0px;
+    width: 90px;
+    height: 90px;
+    background-color: #E1E2E1;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px; }
+
+  #options_row {
+    position: absolute;
+    right: 0;
+    z-index: 100; }
+
+  div.angular_event_list {
+    padding-bottom: 100px; }
+
+  #libcal_events_header {
+    display: none; }
+
+  div.mobile_dates_button {
+    display: none; }
+
+  div.mobile_menu_button {
+    display: none; }
+
+  div.mobile_date_menu_container, div.mobile_branch_menu_container {
+    display: none; }
+
+  .events_container,
+  .nav_container {
+    min-width: 992px; }
+
+  h2, .condensed_header h4 {
+    font-family: 'Mate SC'; }
+
+  .angular_event_list h4 {
+    font-size: 22px;
+    font-weight: normal; }
+
+  .angular_event_list h6 {
+    font-weight: 500; }
+
+  #branchnav {
+    margin-bottom: 15px; }
+
+  #datepickernav li div button,
+  #datepickernav li button,
+  #branchnav li div button,
+  #branchnav li button {
+    height: 42px; }
+
+  .datepicker input {
+    width: 170px; }
+
+  .datepicker {
+    margin-left: 10px; }
+
+  #startdate, #enddate {
+    width: 165px; }
+
+  #bottom_date_nav {
+    height: 100px;
+    border: 1px dashed black; } }
+#featured_img_div {
+  padding: 35px; }
+
+@keyframes date_down {
+  from {
+    transform: rotate(225deg) translateX(85px) rotate(-225deg); }
+  to {
+    transform: rotate(135deg) translateX(85px) rotate(-135deg); } }
+@keyframes date_up {
+  from {
+    transform: rotate(135deg) translateX(85px) rotate(-135deg); }
+  to {
+    transform: rotate(225deg) translateX(85px) rotate(-225deg); } }
+@keyframes menu_down {
+  from {
+    transform: rotate(275deg) translateX(50px) rotate(-275deg); }
+  to {
+    transform: rotate(400deg) translateX(50px) rotate(-400deg); } }
+@keyframes menu_up {
+  from {
+    transform: rotate(400deg) translateX(50px) rotate(-400deg); }
+  to {
+    transform: rotate(275deg) translateX(50px) rotate(-275deg); } }
+@media only screen and (max-width: 768px) {
+  .event_data_container_div {
+    padding-top: 50px; }
+
+  #options_row {
+    display: none; }
+
+  div.cal_event_container {
+    padding-right: 30px; }
+
+  #calendar_featured_img {
+    width: 100%; }
+
+  div.cancel_clickable {
+    height: 100vh;
+    width: 100vh;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0; }
+
+  nav.navbar {
+    display: none; }
+
+  .animate_menu_up {
+    animation: date_menu_up 0.2s linear forwards; }
+
+  .animate_menu_down {
+    animation: date_menu_down 0.2s linear forwards; }
+
+  .animate_date_button_down {
+    animation: date_down 0.2s linear forwards;
+    bottom: -42.5px !important;
+    right: -42.5px !important; }
+
+  .animate_date_button_up {
+    animation: date_up 0.2s linear forwards;
+    bottom: -42.5px !important;
+    right: -42.5px !important; }
+
+  .animate_menu_button_down {
+    animation: menu_down 0.2s linear forwards;
+    bottom: -28.33333px !important;
+    right: -28.33333px !important; }
+
+  .animate_menu_button_up {
+    animation: menu_up 0.2s linear forwards;
+    bottom: -28.33333px !important;
+    right: -28.33333px !important; }
+
+  div.mobile_dates_button {
+    height: 85px;
+    width: 85px;
+    background-color: #4885ed;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 17.5px;
+    right: 17.5px;
+    color: white;
+    font-size: 35px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+  div.mobile_menu_button {
+    height: 56.66667px;
+    width: 56.66667px;
+    background-color: #4885ed;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    color: white;
+    font-size: 25px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+  #datepickernav {
+    display: none; }
+
+  div.branch_button_container {
+    height: 65px;
+    width: 65px;
+    background-color: #4885ed;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    font-size: 30px; }
+
+  div.mobile_date_menu_container, div.mobile_branch_menu_container {
+    z-index: 3;
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    padding: 0 10px; }
+
+  div.mobile_date_menu, div.mobile_branch_menu {
+    position: relative;
+    width: 100%;
+    background-color: #4885ed;
+    padding: 10px 10px; }
+
+  .mobile_date_menu span {
+    color: white; }
+
+  .mobile_date_menu input {
+    margin-bottom: 10px; }
+
+  .mobile_date_menu button {
+    width: 50%; }
+
+  div.events_title {
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    background-color: #4885ed;
+    font-family: 'Mate SC'; }
+
+  div.events_title h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 13px;
+    margin-bottom: 15px; }
+
+  div.angular_event_list {
+    margin-top: 35px; }
+
+  div.button_container {
+    margin-bottom: 10px; }
+
+  div.menu_button_div {
+    display: inline-block;
+    width: 49.2%; }
+
+  div.menu_button_div button {
+    width: 100%;
+    height: 60px;
+    font-size: 18px; }
+
+  div.menu_button_div_left {
+    padding-right: 3px; }
+
+  div.menu_button_div_right {
+    padding-left: 3px; }
+
+  div.mobile_bottom_menu_left_div {
+    display: inline-block;
+    width: 34.2%;
+    padding-right: 3px; }
+
+  div.mobile_bottom_menu_right_div {
+    display: inline-block;
+    width: 64.2%;
+    padding-left: 3px; }
+
+  button.todaybutton {
+    font-size: 18px; }
+
+  button.retrievebutton {
+    font-size: 23px; }
+
+  button.retrievebutton,
+  button.todaybutton {
+    margin-top: 5px;
+    width: 100%;
+    height: 100px; }
+
+  button.submitbutton {
+    margin-top: 5px;
+    width: 100%;
+    height: 80px;
+    font-size: 23px; } }
+.dashed-white {
+  border: 1px dashed white; }
+
+.dashed-red {
+  border: 3px dashed red; }
+
+.tileview_container .body {
+  padding: 10px;
+  background-color: #282c34;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 16px; }
+
+.tileview_container .tile_escape {
+  color: #d7dae0;
+  font-size: 3em;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  -webkit-text-stroke: 3px #282c34; }
+
+.tileview_container .today-title, .tileview_container .tomorrow-title {
+  height: 50px;
+  color: #d7dae0;
+  font-size: 20px; }
+
+.tileview_container .today {
+  height: calc(50vh - 60px);
+  color: #d7dae0;
+  display: flex;
+  flex-wrap: wrap; }
+
+.tileview_container .tomorrow {
+  height: calc(50vh - 60px);
+  color: #d7dae0;
+  display: flex;
+  flex-wrap: wrap; }
+
+.tileview_container .tile-event1,
+.tileview_container .tile-event2,
+.tileview_container .tile-event3,
+.tileview_container .tile-event4 {
+  border: 1px solid #d7dae0;
+  width: calc(20vw - 16px);
+  overflow: hidden; }
+
+.tilecontent {
+  padding: 10px;
+  padding-bottom: 20px;
+  height: 100%; }
+
+.setup_required {
+  background-color: #393f4a; }
+
+.setup_complete {
+  background-color: none !important; }
+
+.tileview_container .tile-event1 {
+  height: 100%; }
+
+.tileview_container h3 {
+  font-size: 15px; }
+
+.tileview_container h4 {
+  font-size: 17px; }
+
+.tileview_container .tile-event2 {
+  height: 50%; }
+
+.tileview_container .tile-event3 {
+  height: 33%; }
+
+.tileview_container .tile-event4 {
+  height: 25%; }
+
+div.tile-event:not(:first-child):not(:nth-child(6)):not(:nth-child(11)) {
+  margin-left: 10px; }
+
+.today div.tile-event,
+.tomorrow div.tile-event {
+  border-radius: 10px; }
+
+.setup_inst {
+  margin-top: 10px; }
+
+.tile-event {
+  cursor: pointer; }
+
+@media screen {
+  #printSection {
+    display: none; } }
+@media print {
+  body * {
+    visibility: hidden; }
+
+  #printSection, #printSection * {
+    visibility: visible; }
+
+  #printSection {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 100%; }
+
+  #calendar_featured_img {
+    width: 250px; }
+
+  #event_content_div {
+    width: 45%;
+    display: inline-block; }
+
+  #featured_img_div {
+    display: inline-block;
+    width: 45%; }
+
+  h1::first-letter,
+  h2::first-letter,
+  h3::first-letter,
+  h4::first-letter {
+    margin-top: 0; } }
+.tgl {
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  cursor: pointer; }
+
+.tgl > input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  /* Put the input behind the label so it doesn't overlay text */
+  visibility: hidden; }
+
+.tgl .tgl_body {
+  width: 60px;
+  height: 30px;
+  background: white;
+  border: 1px solid #dadde1;
+  display: inline-block;
+  position: relative;
+  border-radius: 50px; }
+
+.tgl .tgl_switch {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-color: white;
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  border-radius: 50%;
+  border: 1px solid #ccd0d6;
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.13);
+  -moz-transition: left 250ms cubic-bezier(0.34, 1.61, 0.7, 1), -moz-transform 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+  -o-transition: left 250ms cubic-bezier(0.34, 1.61, 0.7, 1), -o-transform 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+  -webkit-transition: left 250ms cubic-bezier(0.34, 1.61, 0.7, 1), -webkit-transform 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+  transition: left 250ms cubic-bezier(0.34, 1.61, 0.7, 1), transform 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+  z-index: 1; }
+
+.tgl .tgl_track {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  border-radius: 50px; }
+
+.tgl .tgl_bgd {
+  position: absolute;
+  right: -10px;
+  top: 0;
+  bottom: 0;
+  width: 55px;
+  -moz-transition: left 250ms cubic-bezier(0.34, 1.61, 0.7, 1), right 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+  -o-transition: left 250ms cubic-bezier(0.34, 1.61, 0.7, 1), right 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+  -webkit-transition: left 250ms cubic-bezier(0.34, 1.61, 0.7, 1), right 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+  transition: left 250ms cubic-bezier(0.34, 1.61, 0.7, 1), right 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+  background: white; }
+
+.tgl .tgl_bgd-negative {
+  right: auto;
+  left: -45px;
+  background: #006599; }
+
+.tgl:hover .tgl_switch {
+  border-color: #b5bbc3;
+  -moz-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+  -webkit-transform: scale(1.06);
+  transform: scale(1.06); }
+
+.tgl:active .tgl_switch {
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95); }
+
+.tgl > :not(:checked) ~ .tgl_body > .tgl_switch {
+  left: 30px; }
+
+.tgl > :not(:checked) ~ .tgl_body .tgl_bgd {
+  right: -45px; }
+
+.tgl > :not(:checked) ~ .tgl_body .tgl_bgd.tgl_bgd-negative {
+  right: auto;
+  left: -10px; }
+
+.condensed_check {
+  vertical-align: middle;
+  /* Double-sized Checkboxes */
+  zoom: 1.5;
+  background: none; }
+
+/*# sourceMappingURL=libcal_style.css.map */

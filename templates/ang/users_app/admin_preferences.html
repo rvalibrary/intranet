@@ -1,0 +1,126 @@
+<nav-bar></nav-bar>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 style="margin-top: 15px; margin-bottom: 10px;">Admin Preferences</h3>
+      <hr>
+    </div><!-- col-sm-12 -->
+  </div><!--row-->
+
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>Setup Teams (Main)</h4>
+    </div>
+
+    <div class="col-sm-3">
+      <select size="10"
+              style="max-width: 200px; width: 100%; margin-top: 5px;"
+              ng-options="(option[0] | date : 'M/dd') +
+                           ' - ' +
+                           (option[1] | date : 'M/dd') +
+                           ' ' + (option[2])  for option in dates.availableDates"
+              ng-model="dates.selectedDate"
+              ng-change="resetteam()">
+      </select>
+    </div>
+
+    <div style="padding-left: 10px; width: 300px;">
+      <table style="width:100%;">
+        <tr>
+          <td>Date Range:</td>
+          <td>{{dates.selectedDate[0] | date : 'M/dd'}} - {{dates.selectedDate[1] | date : 'M/dd'}}</td>
+        </tr>
+        <tr ng-if= "dates.selectedDate[2]">
+          <td>Setup team:</td>
+          <td>{{dates.selectedDate[2]}}</td>
+        </tr>
+      </table>
+      <div ng-if="dates.selectedDate[2]">
+        <form ng-if="editteam" ng-submit="updateTeam(newtext, dates.selectedDate[3])">
+          <input style="margin-top: 10px;" class="form-control" ng-model="newtext" type="text" placeholder="add setup team here" ng-init="newtext = dates.selectedDate[2]">
+          <button style="margin-top: 10px;" class="btn btn-secondary" type="submit" ng-disabled="newtext == dates.selectedDate[2]">Update</button>
+        </form>
+        <button style="margin-top: 10px;" class="btn btn-secondary" ng-click="start_teamedit()" ng-hide="editteam == true">Edit</button>
+      </div>
+      <form ng-if="!dates.selectedDate[2]" ng-submit="addTeam(dates.selectedDate[0], teamtext)">
+        <input style="margin-top: 10px;" class="form-control" ng-model="teamtext.text" type="text" placeholder="add setup team here">
+        <button style="margin-top: 10px;" class="btn btn-secondary" type="submit" ng-disabled="!teamtext">Add</button>
+      </form>
+    </div>
+
+    <div class="col-sm-12">
+      <hr>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>Users</h4>
+    </div>
+    <div class="col-sm-3">
+      <select size="10"
+              style="max-width: 200px; width: 100%; margin-top: 5px;"
+              ng-options="option.username for option in users.availableOptions"
+              ng-model="users.selectedOption">
+      </select>
+    </div>
+    <div style="padding-left: 10px; width: 300px;">
+      <table style="width:100%;">
+        <tr>
+          <td>Username:</td>
+          <td>{{users.selectedOption.username}}</td>
+        </tr>
+        <tr>
+          <td>Branch:</td>
+          <td>{{users.selectedOption.branch}}</td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><span ng-if="users.selectedOption.email">{{users.selectedOption.email}}</span><span ng-if="!users.selectedOption.email">none</span></td>
+        </tr>
+        <tr>
+          <td>Admin:</td>
+          <td>{{users.selectedOption.is_admin}}</td>
+        </tr>
+        <tr>
+          <td>Ref Entries:</td>
+          <td>{{users.selectedOption.ref_quant}}</td>
+        </tr>
+      </table>
+      <div style="bottom: 0; position: absolute;">
+        <button class="btn btn-secondary" data-toggle="modal" data-target="#edit_modal" data-backdrop="static" data-keyboard="false" ng-click="useredit.is_admin = users.selectedOption.is_admin">Edit User</button>
+        <button class="btn btn-secondary" data-toggle="modal" data-target="#new_user_modal" data-backdrop="static" data-keyboard="false">Add New User</button>
+      </div>
+    </div>
+  </div><!--row-->
+
+
+  <!-- <div class="row">
+    <div class="col-sm-12"><h4 style="margin-bottom: 15px;">Request Collection Periods</h4></div>
+    <div class="col-sm-3">
+      <select size="10"
+              style="max-width: 200px; width: 100%; margin-top: 5px;"
+              ng-options="((option.startdate | date:'MM/dd') + ' - ' + (option.expiration | date:'MM/dd')) for option in activations"
+              ng-model="activation">
+      </select>
+    </div>
+    <div class="col-sm-9" style="padding-top: 3px;">
+      <button class="btn btn-success" ng-click="addActivation('2018-01-19T00:00:00Z', '2018-01-30T13:00:00Z')">Add Collection Period</button>
+
+    </div>
+    <div class="col-sm-12">
+          <hr>
+    </div>
+
+  </div> -->
+
+
+
+
+</div><!--container-->
+
+
+<modals></modals>
